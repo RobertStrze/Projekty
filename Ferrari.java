@@ -1,59 +1,19 @@
-public class Ferrari {
-    public static String color;
-    private int horsePower;
-    public final String plateNumber;
+package Lesson7;
 
-    public Ferrari() {
-        color = "Black";
-        horsePower = 425;
-        plateNumber = "JAVA2019";
+public class Ferrari extends Car {
+    Ferrari(String color ,String fuelType){
+        super(color, fuelType);
+    }
+    @Override
+    public void drive(){
+        setFuelType("Gasoline");
+        //setColor("Red");
+        startEngine();
+        System.out.println("I'm driving with speed 120km/h");
+        //drive();
     }
 
-    public static void main(String[] args) {
-        Ferrari car = new Ferrari();
-        car.SetColor("Red");
-        car.SetHorsePower(450);
-        //car.SetPlateNumber("JAVA1234"); // Can't assign a new value to final variable.
-        car.color = "Pink";
-        car.horsePower = 385;
-        // car.plateNumber = "JAVA1234"; // You can't change final variable value.
-        Ferrari.color = "Yellow";
-        SetColor(); // Overload method.
-        //Ferrari.horsePower = 520; // Non-static field can't be referenced from static context.
-        //Ferrari.plateNumber = "JAVA1234"; // Non-static field can't be referenced from static context.
-        System.out.println("Horsepower: " + car.GetHorsePower());
-        System.out.println("Color: " + car.GetColor());
-        System.out.println("Plate Number: " + car.GetPlateNumber());
+    protected static void clean(){
+        System.out.println("Ferrari is cleaned");
     }
-
-    static void SetColor(String newColor) {
-        color = newColor;
-    }
-    static String SetColor(){
-        color = "Gold";
-        return color;
-    }
-
-    static String GetColor() {
-        return color;
-    }
-
-
-    void SetHorsePower(int horsePower) {
-        this.horsePower = horsePower;
-    }
-
-    int GetHorsePower() {
-        return horsePower;
-    }
-
-    /*final void SetPlateNumber(String newPlateNumber) {
-        plateNumber = newPlateNumber;
-    }*/
-
-    final String GetPlateNumber() {
-        return plateNumber;
-    }
-
-
 }
