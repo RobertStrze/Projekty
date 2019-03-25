@@ -20,15 +20,19 @@ public class Car implements Vehicle {
         this.fuelType = fuelType;
     }
     Car(String color, String fuelType){
-        this.color = "Black";
-        this.fuelType = "Gasoline";
+        this.color = color;
+        this.fuelType = fuelType;
     }
 
     protected void startEngine(){
         System.out.println("Engine Started");
     }
-    protected static void clean(){
+    private static void clean(){
         System.out.println("Car is cleaned");
+    }
+
+    protected void changeTires(){
+        System.out.println("I'm changing tires for winter");
     }
 
     @Override

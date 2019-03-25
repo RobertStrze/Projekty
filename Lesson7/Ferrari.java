@@ -10,10 +10,15 @@ public class Ferrari extends Car {
         //setColor("Red");
         startEngine();
         System.out.println("I'm driving with speed 120km/h");
-        //drive();
+        super.drive();
     }
 
     protected static void clean(){
         System.out.println("Ferrari is cleaned");
+    }
+
+    @Override
+    protected void changeTires() {
+        System.out.println("Changing tires in my ferrari");
     }
 }
