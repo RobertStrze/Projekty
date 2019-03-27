@@ -23,5 +23,7 @@ public class Main {
         computer.installProcessor(intelProcessor);
         computer.installCoolingSystem(fanCS);
         System.out.println(computer.toString());
+        System.out.println(intelProcessor.toString());
+        System.out.println(amdProcessor.toString());
     }
 }
