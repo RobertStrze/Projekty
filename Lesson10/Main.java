@@ -2,11 +2,7 @@ package Lesson10;
 
 import java.util.*;
 
-public class Main extends Person {
-
-    public Main(String name, String surname, int age) {
-        super(name, surname, age);
-    }
+public class Main{
 
     public static void main(String[] args) {
         Person member1 = new Person("John", "Smith", 45);
@@ -30,13 +26,10 @@ public class Main extends Person {
                 }
             }
         }
-        for(Person member: people){
-            member.getFamilyMember();
-        }
         System.out.println("People " + people);
-        System.out.println("John " + member1.uniqueFam);
-        System.out.println("Alice " + member2.uniqueFam);
-        System.out.println("Joshua " + member3.uniqueFam);
-        System.out.println("John " + member4.uniqueFam);
+        for(Person member: people){
+            System.out.println(member.name + " " + member.getFamilyMember());
+        }
+
     }
 }
